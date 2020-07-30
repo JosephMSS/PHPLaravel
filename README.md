@@ -63,3 +63,18 @@ public function index(Request $request)
 ## Migraciones 
 * > Es un medio por el cual podemos trabajar de manera colaborativa en la base de datos y asi no hya que estar mandando a cada rato el script de la base de datos.
 Corremos las kigraciones que poseemos por medio del comando ```php artisan migrate```
+### Creacion de una tabla pos consola
+```
+php artisan make:migration create_table_expense_reports --create  
+```
+* Documentacion de migraciones
+* >https://laravel.com/docs/5.7/migrations
+## Creacion de modelos con eloquent
+La creacion de los modelos se puede hacer desde la coonsola por edio del comando 
+```php artisan make:model nombre del modelo```
+* bases de datos en plural y modelos en singular
+### Comado tinker
+* > Entorno que nos permite probar lo que vamos a ejecutar para ver si funciona ```php artisan tinker```
+* > Podemos indicar el modelo que  vamos a utilizar para ejecutar las pruebas```App\expenseReport::all```
+* >Creamos una instancia en memoria ```$report=new App\ExpenseReport```
+* > se guarda con el metodo savw
