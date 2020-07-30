@@ -46,3 +46,14 @@ Route::get('/test', function () {
  Route::get('/','HomeController@index');
  ```
  * >Recibe el nombre del controlador, seguido de el metodo al que se quiere ingresar
+## Request
+* > Se manejan parametros por medio de la url.
+* > En los metodos de los controladores se les indica que van a recibir un Objeto tipo ```Request```
+```
+public function index(Request $request)
+    {
+        var_dump($request->query('title'));die;
+        return view('welcome');
+    }
+```
+* >Con ```$request->query('nombre del parametro','valor por default')``` podemos extraer el contenido de la informacion que se manda  por el request, ademas se puede agregar un segundo parametro opcional que permite establecer el valor por default
