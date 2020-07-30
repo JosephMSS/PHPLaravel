@@ -23,3 +23,16 @@ Route::get('/test', function () {
 * >```Route::any ``` : cualquier metodo ya sea post, put,delete, va a entrar a  esta ruta. 
 ## Funcionamiento de blade
 * >Este es un motor de rendereo
+* >Documentacion: https://laravel.com/docs/5.7/views
+* >La informacion se puede obtener desde las rutas por medio de get, en este caso:
+```
+Route::get('/test', function () {
+    return view('test',[
+                'title'=>'Curso de php'
+
+    ]);//recibe como parametro el nombre de la vista.
+    //ademas puede recibir array, al cual podemos acceder desde la vista );
+
+```
+* >Para acceder desde las vistas a las variables que se mandan por la ruta e  imprimirlas se aplica: {{ $variable }}
+ ``@isset()``` verifica la existencia del contenido
