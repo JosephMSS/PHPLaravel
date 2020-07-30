@@ -57,3 +57,9 @@ public function index(Request $request)
     }
 ```
 * >Con ```$request->query('nombre del parametro','valor por default')``` podemos extraer el contenido de la informacion que se manda  por el request, ademas se puede agregar un segundo parametro opcional que permite establecer el valor por default
+## Cofiguracion de Laravel
+* > en la carpeta de vendor en el archivo .env vamos a tener todas configuraciones
+`` APP_DEBUG= para que nos muestre los errores que se dan mientras se da el desarrollo de la aplicacion.
+## Migraciones 
+* > Es un medio por el cual podemos trabajar de manera colaborativa en la base de datos y asi no hya que estar mandando a cada rato el script de la base de datos.
+Corremos las kigraciones que poseemos por medio del comando ```php artisan migrate```
