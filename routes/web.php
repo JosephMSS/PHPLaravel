@@ -17,8 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/test', function () {
-    return [
-        'saludo'=>'hola',
-        'nombre'=>'Joseph'
-    ];
+    return view('test');
 });
