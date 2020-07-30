@@ -77,4 +77,10 @@ La creacion de los modelos se puede hacer desde la coonsola por edio del comando
 * > Entorno que nos permite probar lo que vamos a ejecutar para ver si funciona ```php artisan tinker```
 * > Podemos indicar el modelo que  vamos a utilizar para ejecutar las pruebas```App\expenseReport::all```
 * >Creamos una instancia en memoria ```$report=new App\ExpenseReport```
-* > se guarda con el metodo savw
+* > se guarda con el metodo save
+* > Para slir de tinker lo hacemos con ```exit```
+## Creacion de nuevas migraciones sobre una tabla existente
+```
+php artisan make:migration create_colum_title_in_reports --table expen 
+se_reports
+```
