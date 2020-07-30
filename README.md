@@ -36,3 +36,13 @@ Route::get('/test', function () {
 ```
 * >Para acceder desde las vistas a las variables que se mandan por la ruta e  imprimirlas se aplica: {{ $variable }}
  ``@isset()``` verifica la existencia del contenido
+ ## Creacion de controladores
+ * > este se puede hacer desde la consola
+ ``` 
+ php artisan make:controller NombreController
+ ```
+ * > Una vez se crea el controlador se pueden crear metodos los cuales pueden ser usados por las rutas por medio de la siguiente manera
+ ```
+ Route::get('/','HomeController@index');
+ ```
+ * >Recibe el nombre del controlador, seguido de el metodo al que se quiere ingresar
