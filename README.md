@@ -119,3 +119,6 @@ Route::resource('/expense_reports','ExpenseReportController');
  En la parte hija se debe colocar 
  ```@extends ``` para poder utilizar al padre 
  * >  A la parte hija se se asignaria un ```@section``` este debe concidir con el nombre que colocamos en el yield
+ ## Creacion del formulario
+ * > La ruta qu definimos en el formulario lo hacemos debido a que el metodo store del controlador se va por esta ruta y por medio de un metodo post, esto podemos ver  si hacemos un route:list
+<form action="/expense_repots" method="post"></form>
