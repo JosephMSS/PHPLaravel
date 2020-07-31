@@ -101,3 +101,21 @@ Route::resource('/expense_reports','ExpenseReportController');
 
 ```
 * >Este recibe como parametro el nombre de la ruta y del controlador
+## archivos blade
+* > Para acceder a archivos que se encuentran en carppetas, debemos ingresar a ellos de la siguiente manera
+```
+   public function index()
+    {
+        return view('expenseReport.index',[
+            'expenseReports'=>ExpenseReport::all()
+        ]);
+    }
+```
+* > Ademas de poder mandar una variable con las consultas.
+ * >Nos permite establecer el contenedor donde se establecer el cogigo que vamos a cambiar seguun las vistas, esta seria la parte padre
+ ```
+ @yield('content')
+ ```
+ En la parte hija se debe colocar 
+ ```@extends ``` para poder utilizar al padre 
+ * >  A la parte hija se se asignaria un ```@section``` este debe concidir con el nombre que colocamos en el yield
