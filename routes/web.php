@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','HomeController@index');
 
 Route::get('/dashboard','DashboardController@index');
+Route::resource('/expense_reports','ExpenseReportController');

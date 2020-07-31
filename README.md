@@ -84,3 +84,20 @@ La creacion de los modelos se puede hacer desde la coonsola por edio del comando
 php artisan make:migration create_colum_title_in_reports --table expen 
 se_reports
 ```
+## Controladores y  recursos
+* > AL controlador se debe agregar el use de los modelos que se van a utilizar
+```
+use App\ExpenseReport;
+```
+* > Con el comando 
+```
+php artisan make:controller NombreController --resourse 
+```
+* >Con va a permitir crear los metodos necesarios para la creacion de un CRUD 
+## Rutas
+* >Se pueden generar las rutas que necesite un CRUD por medio de 
+```
+Route::resource('/expense_reports','ExpenseReportController');
+
+```
+* >Este recibe como parametro el nombre de la ruta y del controlador
