@@ -121,4 +121,22 @@ Route::resource('/expense_reports','ExpenseReportController');
  * >  A la parte hija se se asignaria un ```@section``` este debe concidir con el nombre que colocamos en el yield
  ## Creacion del formulario
  * > La ruta qu definimos en el formulario lo hacemos debido a que el metodo store del controlador se va por esta ruta y por medio de un metodo post, esto podemos ver  si hacemos un route:list
+```
 <form action="/expense_repots" method="post"></form>
+```
+
+## CSRF
+* > Para evitar el errore 419 se debe colocar ```@CSRF `` despues de iniciar el formulario, esto es para que php genere un token que asegure que la peticion se esta haciendo desde la aplicacion.
+* >Es un middkeware, este se encuentra en la  carpeta http en el archivo del kernel.
+## Creacion de un objeto
+* >Al enviar por medio de post los datos que se necesitan, llos podemos sacar por medio del parametro request que tenemos en el metodo store del controlador
+```
+  public function store(Request $request)
+    {
+        $report=new ExpenseReport();
+        $report->title= $request->get('title');
+        $report->save();
+        return redirect('/expense_reports');
+
+    }
+```
