@@ -155,3 +155,14 @@ Route::resource('/expense_reports','ExpenseReportController');
         </form>
 ```
 
+## Confirmar Eliminar Elementos
+* > Esto se puede hacer por medio de javascript, poir ahora se va a hacer por medio de laravel
+* > creamao una nueva vista para confirmar la eliminacion del elemento, ademas creamos una nueva ruta la cual nos mande a la redireccion, ademas de un nuevo elemento que cargue la nueva vista.
+* >  Unicamnete hay que cambiar ```@method('put') ``` por  ``` @method('delete')``` 
+* > reocrdar que hay que verificar la existencia de lo elementos, ya que se puede modificar por medio de las rutas.
+* > esto se puede hacer por medio del metodo 
+```
+        $report=ExpenseReport::findOrFail($id);
+
+```
+* > Debe de arrojar el error 404
