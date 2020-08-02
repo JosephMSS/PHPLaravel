@@ -166,3 +166,6 @@ Route::resource('/expense_reports','ExpenseReportController');
 
 ```
 * > Debe de arrojar el error 404
+## Validacion de archivos
+* >Para esto podemos utilizar las validaciondes que nos ofrece laravel https://laravel.com/docs/7.x
+Por lo que ekn el controlador debemos emplear el metodo validation que contiene el $request
