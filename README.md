@@ -140,3 +140,18 @@ Route::resource('/expense_reports','ExpenseReportController');
 
     }
 ```
+## Modificacion de elementos
+* >  Primero debemmos ejecutar el evento de edit para mandar la informacion al controlador y asi cargar la vista de actualizacion, despues ejecutamos la actualizacion.
+* > Para la modificacion de los elementos que se almacenan en la base de datos de debe hacer por medio de in put /patch, sin embargo esto no se puede hacer directamente desde el action que se asigna en el formulario.
+```
+ <form action="/expense_reports/{{$report->id}}" method="post">
+            @csrf
+            @method('put')
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" name="title" id="title" placeholder="Type a title">
+        </div>
+        <button  class="btn btn-primary" type="submit">Submit</button>
+        </form>
+```
+
