@@ -172,3 +172,33 @@ Por lo que ekn el controlador debemos emplear el metodo validation que contiene 
 ## Creacion de la visata de los reportes
 * > La creacion de las vistas involucra modificar el metodo  de show, ya que en vez de recibir un parametro id reciba el objeto* esto 
 * > Esta manera se puede manda la verificacion de la existencia de los datos  directamente y sin la necesidad de ejecutar el findOrFail
+## Relaciones con eloquent
+* >Primero debemos crear un modelo por medio de la consola 
+```
+php artisan make:model -m Nomnre del mmodelo en singular
+```
+* Este se escribe en singular ya que solo representa un sol objeto
+* Ademas crea el modelo y la migracion 
+* > Para el ejemplo se va a ejecutar una relacion de uno a muchos, esto lo hacemos en el modelo.
+#### En la clase Expense
+```
+  //los gastos pertenece a un reporte
+    public function expenseReport()
+    {
+        return $this->belongsTo(ExpenseReport::class);
+    } 
+```
+#### En la clase expenseReports
+```
+//Un expense report tiene muchos gastos
+    public function expenses()
+    {
+        return $this->hasMany(Expense::class);
+    }
+}
+```
+* > Ahora lo  podemos verificar por medio de la consola para ver si funciona por medio de tinker, podemos llamar los metodos , destacar que se llamaria como si fuera un atributo y no como una funcion.Estas peticiones funcionan en amc=bas direcciones  
+* > ```php artisan tinker```
+* >```App\ExpenseReport::first();```
+* >```App\ExpenseReport::first()->expenses;```
+* >El uso de atributos como ```expense_report_id ``` permiten identificar autoaticamente las relaciones, esto se puede modificar
