@@ -202,3 +202,14 @@ php artisan make:model -m Nomnre del mmodelo en singular
 * >```App\ExpenseReport::first();```
 * >```App\ExpenseReport::first()->expenses;```
 * >El uso de atributos como ```expense_report_id ``` permiten identificar autoaticamente las relaciones, esto se puede modificar
+## Trabajando con las relaciones
+ * > Para esto creamos un controlador de para la creacion de los expenses por medio de make:controller -r  para que cree todos los metodos necesarios.
+ * >La forma en la que vamos a ordenar las rutas en este caso va a ser de la siguiente manera
+ ```
+        <a href="/expenseReports/{{ $report->id }}/expenses/create"></a>
+ 
+ ````
+* > Esto lo que indica es que la creacion de cada expense  se hace en base a la relacion de un expense report
+### Controlador
+#### Create
+* > El el metodo create este debe recibir un objeto expenseReport ya que a partir del id debemos enlazar los expense al expense report

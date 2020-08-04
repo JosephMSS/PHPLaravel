@@ -3,7 +3,7 @@
 
 <div class="row">
     <div class="col">
-    <h1> Report {{ $report->title }}</h1>
+        <h1> Report {{ $report->title }}</h1>
     </div>
 </div>
 
@@ -12,8 +12,26 @@
 </div>
 <div class="row">
     <div class="col">
-    Details...
+        <h3>Details</h3>
+        <table class="table">
+            @foreach($report->expenses as $expense)
+            <tr>
+
+                <td>{{$expense->description}}</td>
+                <td>{{$expense->created_at}}</td>
+                <td>{{$expense->amount}}</td>
+            </tr>
+            @endforeach
+        </table>
     </div>
 </div>
+<div class="row">
+    <div class="col">
+        <a  class="btn btn-primary"href="/expense_reports/{{ $report->id }}/expenses/create">Add Expense</a>
+    </div>
+</div>
+
+
+
 
 @endsection
