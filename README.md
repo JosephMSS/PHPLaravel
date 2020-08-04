@@ -169,3 +169,6 @@ Route::resource('/expense_reports','ExpenseReportController');
 ## Validacion de archivos
 * >Para esto podemos utilizar las validaciondes que nos ofrece laravel https://laravel.com/docs/7.x
 Por lo que ekn el controlador debemos emplear el metodo validation que contiene el $request
+## Creacion de la visata de los reportes
+* > La creacion de las vistas involucra modificar el metodo  de show, ya que en vez de recibir un parametro id reciba el objeto* esto 
+* > Esta manera se puede manda la verificacion de la existencia de los datos  directamente y sin la necesidad de ejecutar el findOrFail
