@@ -8,8 +8,13 @@
 </div>
 
 <div class="row">
-    <a class="btn btn-secondary" href="/expense_reports/">Back</a>
+    <div class="col">
+        <a class="btn btn-secondary" href="/expense_reports/">Back</a>
+        <a class="btn btn-primary" href="/expense_reports/{{ $report->id }}/confirmSendMail">Send Email</a>
+    </div>
+    </div>
 </div>
+
 <div class="row">
     <div class="col">
         <h3>Details</h3>

@@ -14,23 +14,23 @@
     <div class="col">
         <div class="alert alert-danger">
             @if($errors->any())
-                @foreach ($errors->all() as $error)
-                    <ul>
-                        <li>
-                            {{ $error }}
-                        </li>
-                    </ul>
-                @endforeach
-    
+            @foreach ($errors->all() as $error)
+            <ul>
+                <li>
+                    {{ $error }}
+                </li>
+            </ul>
+            @endforeach
+
             @endif
         </div>
         <form action="/expense_reports/{{ $report->id }}/expenses" method="post">
             @csrf
             <div class="form-group">
                 <label for="description">Description</label>
-            <input type="text" class="form-control" name="description" id="description" placeholder="Description" value="{{ old('description') }}">
+                <input type="text" class="form-control" name="description" id="description" placeholder="Description" value="{{ old('description') }}">
                 <label for="amount">Amount</label>
-            <input type="number" class="form-control" name="amount" id="amount" placeholder="Amount" value="{{ old('amount') }}">
+                <input type="number" class="form-control" name="amount" id="amount" placeholder="Amount" value="{{ old('amount') }}">
             </div>
             <button class="btn btn-primary" type="submit">Submit</button>
         </form>
