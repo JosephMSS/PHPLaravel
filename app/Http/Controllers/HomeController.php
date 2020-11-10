@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        return view('layouts.app');
+        return view('welcome');
     }
     //
 }

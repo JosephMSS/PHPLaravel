@@ -15,7 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','HomeController@index');
 
-Route::get('/','DashboardController@index');
 Route::resource('/expense_reports','ExpenseReportController');
 Route::get('/expense_reports/{id}/confirmDelete','ExpenseReportController@confirmDelete');
 Route::get('/expense_reports/{id}/confirmSendMail','ExpenseReportController@confirmSendMail');
@@ -27,4 +26,4 @@ Route::post('/expense_reports/{expense_report}/expenses','ExpenseController@stor
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
